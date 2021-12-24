@@ -19,6 +19,11 @@ salt:
     master: salt
     backup_mode: minion
     id: {{ grains['id']|lower }}
+{% if grains['id'] | regex_match('docker-(.*)', ignorecase=True) %}
+    grains:
+      roles:
+        - docker
+{% endif %}
 
   master:
     default_include: master.d/*.conf
