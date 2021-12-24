@@ -23,6 +23,7 @@ salt:
     grains:
       roles:
         - docker
+        - packer
 {% endif %}
 
   master:
