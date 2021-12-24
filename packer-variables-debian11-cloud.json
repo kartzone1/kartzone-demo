@@ -1,0 +1,10 @@
+{
+    "qemuargs_opt": "-bios",
+    "qemuargs_value": "/usr/share/ovmf/OVMF.fd",
+    "boot_command": "<wait><wait><wait>c<wait><wait><wait>linux /install.amd/vmlinuz auto=true url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/{{ user `preseed_path` }} hostname={{ .Name }} interface=auto vga=788 noprompt quiet --<enter>initrd /install.amd/initrd.gz<enter>boot<enter>",
+    "build_directory": "/srv/packer/build",
+    "headless": "true",
+    "box_basename": "debian11-cloud",
+    "http_directory": "/srv/packer/templates/kartzone-demo",
+    "preseed_path": "debian11-cloud-preseed.cfg"
+}
