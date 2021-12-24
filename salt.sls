@@ -39,7 +39,7 @@ salt:
 salt_formulas:
   git_opts:
     default:
-      baseurl: ssh://git@github.com/saltstack-formula
+      baseurl: https://github.com/saltstack-formulas
       basedir: /srv/salt/states
       update: True
       options:
